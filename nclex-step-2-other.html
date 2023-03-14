@@ -23,10 +23,10 @@
                 <a href="index.html" class="logo">
                     <img src="img/logo.png" alt="logo">
                 </a>
-                <ul class="user-nav">
+                <ul class="user-nav user-nav-dark">
                     <li>
                         <a href="tel:7028196645">
-                            <img src="img/icon-phone.svg" alt="icon-phone">
+                            <img src="img/icon-phone-dark.svg" alt="icon-phone-dark">
                             702-819-6645
                         </a>
                     </li>
@@ -37,18 +37,15 @@
             </div>
         </header>
         <main class="main-content">
-            <section class="section-steps">
+            <section class="section-steps section-steps-yellow">
                 <div class="container">
                     <div class="content-box">
                         <ul class="steps-nav">
                             <li class="steps-nav-item done">
-                                <img src="img/logo-icon.png" alt="logo-icon">
+                                <img src="img/logo-icon-yellow.png" alt="logo-icon-yellow">
                             </li>
                             <li class="steps-nav-item current">
-                                <img src="img/logo-icon.png" alt="logo-icon">
-                            </li>
-                            <li class="steps-nav-item">
-                                <img src="img/logo-icon.png" alt="logo-icon">
+                                <img src="img/logo-icon-yellow.png" alt="logo-icon-yellow">
                             </li>
                         </ul>
                         <h2>Set up your profile</h2>
@@ -57,7 +54,7 @@
                                 <img src="img/step-icon-1.svg" alt="step-icon-1">
                             </div>
                             <div>
-                                <h5>When do you graduate?</h5>
+                                <h5>When are you taking hte NCLEX?</h5>
                                 <div class="form-group">
                                     <select class="custom-select" id="mounth">
                                         <option value="hide">Month</option>
@@ -107,22 +104,24 @@
                         </div>
                         <div class="step-item">
                             <div class="step-icon">
-                                <img src="img/step-icon-2.svg" alt="step-icon-2">
+                                <img src="img/step-icon-3.svg" alt="step-icon-3">
                             </div>
                             <div>
-                                <h5>Which license are you currently pursuing?</h5>
+                                <h5>How did you first hear about SimpleNursing?</h5>
                                 <div class="form-group">
-                                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                                        <label class="btn btn-radio">
-                                            <input type="radio" name="options" id="option1"> RN
-                                        </label>
-                                        <label class="btn btn-radio">
-                                            <input type="radio" name="options" id="option2"> LPN/LVN
-                                        </label>
-                                        <label class="btn btn-radio active">
-                                            <input type="radio" name="options" id="option3" checked> NP
-                                        </label>
-                                    </div>
+                                    <select class="custom-select first-hear-select" id="first-hear">
+                                        <option value="hide">Select only one</option>
+                                        <option value="tikTok">TikTok</option>
+                                        <option value="reddit">Reddit</option>
+                                        <option value="facebook">Facebook</option>
+                                        <option value="youTube">YouTube</option>
+                                        <option value="classmate">Classmate/Friend</option>
+                                        <option value="school-instructor">School instructor</option>
+                                        <option value="search-engine">Search Engine</option>
+                                        <option value="etsy">Etsy</option>
+                                        <option value="other" selected>Other</option>
+                                    </select> 
+                                    <textarea name="other-textarea" class="form-control" placeholder="Lorem ipsum dolor sit amet consectetur"></textarea>
                                 </div>
                             </div>
                         </div>
