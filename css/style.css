@@ -1290,6 +1290,9 @@ h5 {
     text-decoration: none;
 }
 /* Section Blog Single Purple */
+.main-content-blog-purple .section-blog-single .post-banner {
+    background-color: #FAF3FB;
+}
 .main-content-blog-purple .section-blog-single .post-banner .col-title {
     background-image: url(../img/post-banner-bg-purple.svg);
 }
