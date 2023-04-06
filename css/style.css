@@ -1,6 +1,7 @@
 /* ----- BASE ----- */
 html {
     font-size: 16px;
+    scroll-behavior: smooth;
 }
 body {
     font-family: 'Open Sans', sans-serif;
@@ -925,7 +926,7 @@ h5 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-bottom: 3.2rem;
+    padding: 0 2rem 3.2rem;
     position: relative;
     background-image: url(../img/post-banner-bg-blue.svg);
     background-repeat: no-repeat;
@@ -1001,6 +1002,14 @@ h5 {
     padding-left: 0.1rem;
     margin-bottom: 0.4rem;
 } 
+.section-blog-single .nav-box ol {
+    padding-left: 1.7rem;
+    margin-top: 1.5rem;
+}
+.section-blog-single .nav-box ol li {
+    margin-bottom: 0.95rem;
+    font-weight: 500;
+}
 .section-blog-single .nav-box li a {
     color: #00709C;
 }
@@ -1027,6 +1036,7 @@ h5 {
     line-height: 2.25rem;
     list-style: disc;
     letter-spacing: 0.25px;
+    font-weight: 500;
 }
 .section-blog-single .col-post-content > ul li::marker {
     font-size: 0.875rem;
@@ -1094,6 +1104,7 @@ h5 {
 }
 .section-blog-single .col-post-content > ol {
     margin-bottom: 1.2rem;
+    margin-right: -0.1rem;
 }
 .section-blog-single .text-box {
     background: #F4FAFE;
@@ -1122,7 +1133,7 @@ h5 {
     height: 24.7rem;
     position: relative;
     margin-top: -0.2rem;
-    margin-bottom: -0.3rem;
+    margin-bottom: 1.5rem;
 }
 .section-blog-single .video-wrap video {
     max-width: 100%;
@@ -1132,10 +1143,12 @@ h5 {
 .section-blog-single p a {
     color: #00709C;
     font-weight: 700;
-    text-decoration: underline;
+    display: inline-block;
+    border-bottom: 1px solid #00709C;
+    line-height: 1rem;
 }
 .section-blog-single p a:hover {
-    text-decoration: none;
+    border-bottom: 0;
 }
 .section-blog-single .col-post-content > .list-color li {
     color: #4E6172;
@@ -1283,11 +1296,33 @@ h5 {
 .section-blog-single .col-post-content > ol li a {
     color: #00709C;
     font-weight: 700;
-    text-decoration: underline;
+    display: inline-block;
+    border-bottom: 1px solid #00709C;
+    line-height: 1rem;
 }
 .section-blog-single .col-post-content > ul li a:hover, 
 .section-blog-single .col-post-content > ol li a:hover {
-    text-decoration: none;
+    border-bottom: 0;
+}
+.section-blog-single .col-post-content > ul li a.font-weight-medium, 
+.section-blog-single .col-post-content > ol li a.font-weight-medium {
+    font-weight: 500;
+}
+.section-blog-single .text-box-large {
+    padding: 0.5rem 0;
+}
+.section-blog-single .col-post-content > ol.bold-list li::marker {
+    font-weight: 700;
+    color: #24292E;
+}
+.section-blog-single .col-post-content > ol.text-dark li {
+    color: #24292E;
+}
+.blog-single-hypertonic .col-post-content > ul li {
+    margin-bottom: 0.62rem;
+}
+.blog-single-hypertonic .col-post-content > ul {
+    margin-bottom: 1.5rem;
 }
 /* Section Blog Single Purple */
 .main-content-blog-purple .section-blog-single .post-banner {
@@ -1317,6 +1352,7 @@ h5 {
 }
 .main-content-blog-purple .section-blog-single p a {
     color: #9510AC;
+    border-bottom-color: #9510AC;
 }
 .main-content-blog-purple .section-blog-single .text-box {
     background-color: #FAF3FB;
@@ -1361,6 +1397,7 @@ h5 {
 }
 .main-content-blog-yellow .section-blog-single p a {
     color: #FAC710;
+    border-bottom-color: #FAC710;
 }
 .main-content-blog-yellow .section-blog-single .text-box {
     background-color: #FFF7DC;
@@ -1461,7 +1498,7 @@ h5 {
     background-image: url(../img/search-box-bg-1.svg);
     background-repeat: no-repeat;
     background-size: cover;
-    width: 32rem;
+    width: 48.2rem;
     height: 13.3rem;
     position: absolute;
     bottom: 0;
@@ -1752,6 +1789,12 @@ h5 {
     }
     /* ----- /SECTION BLOG SINGLE ----- */
     /*  */
+    /* ----- SECTION SEARCH ----- */
+    .search-box::before {
+        width: 39rem;
+    }
+    /* ----- /SECTION SEARCH ----- */
+    /*  */
 }
 @media(max-width: 767px) {
     h1 {
@@ -1980,6 +2023,9 @@ h5 {
     .section-blog-single .video-wrap {
         height: 17rem;
     }
+    /* ----- /SECTION BLOG SINGLE ----- */
+    /*  */
+    /* ----- SECTION SEARCH ----- */
     .search-box::before {
         width: 20rem;
         height: 5.3rem;
@@ -1987,7 +2033,11 @@ h5 {
     .search-box {
         padding: 3.5rem 1rem;
     }
-    /* ----- /SECTION BLOG SINGLE ----- */
+    .search-box::after {
+        width: 16.6rem;
+        height: 7.3rem;
+    }
+    /* ----- /SECTION SEARCH ----- */
     /*  */
 }
 /* ----- /MEDIA ----- */
