@@ -1324,6 +1324,10 @@ h5 {
 .blog-single-hypertonic .col-post-content > ul {
     margin-bottom: 1.5rem;
 }
+.section-blog-single .text-box-transparent {
+    background-color: transparent;
+    margin-bottom: 1.3rem;
+}
 /* Section Blog Single Purple */
 .main-content-blog-purple .section-blog-single .post-banner {
     background-color: #FAF3FB;
