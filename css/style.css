@@ -277,6 +277,30 @@ h5 {
     padding: 0.3rem 1.4rem;
     margin-left: 1.4rem;
 }
+/* Header Grey */
+.header-grey {
+    border: 0;
+    background: #F8F9FA;
+}
+.header-grey .container {
+    max-width: 977px;
+}
+.header-grey .logo {
+    width: 13.9rem;
+}
+.header-grey .header-nav .buttons .btn {
+    padding: 0.475rem 1.9rem;
+    margin-left: 0.7rem;
+}
+.header-grey .header-nav .buttons {
+    margin-left: 1.7rem;
+}
+.header-grey .header-nav .buttons .btn-outline-blue {
+    padding: 0.475rem 1.7rem;
+}
+.header-grey .menu li {
+    margin-left: 1.1rem;
+}
 /* ----- /HEADER ----- */
 /*  */
 /* ----- SECTION MEMORY MUSIC ----- */
@@ -1600,6 +1624,200 @@ h5 {
 }
 /* ----- /SECTION SEARCH ----- */
 /*  */
+/* ----- SECTION FORM ----- */
+.section-form {
+    padding-top: 9.2rem;
+    padding-bottom: 10.1rem;
+}
+.section-form .col {
+    padding: 0;
+}
+.form-box {
+    background-color: #00466D;
+    border-radius: 3.375rem;
+    color: #ffffff;
+    padding: 3.4rem 3rem 2.5rem;
+}
+.form-box h1 {
+    color: #ffffff;
+}
+.form-box .image-wrap {
+    position: relative;
+    width: 16.0625rem;
+    height: 16.0625rem;
+    margin: 0 auto;
+}
+.form-box .image-wrap .icon {
+    position: absolute;
+    bottom: 2.8rem;
+    right: 2.8rem;
+}
+.form-box-thanks {
+    min-height: 38.3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 3rem 3rem;
+}
+.form-box-thanks h1 {
+    margin-bottom: 4.5rem;
+    line-height: 4.5rem;
+    text-align: center;
+}
+.form-box h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 4.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+.form-box .form-group {
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding-bottom: 0.3rem;
+    margin-bottom: 1.55rem;
+}
+.form-box .form-group label {
+    font-size: 1.125rem;
+    display: block;
+    line-height: 1.5rem;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    margin-bottom: 1.2rem;
+}
+.form-box .form-group .radio-buttons {
+    display: flex;
+    flex-wrap: wrap;
+}
+.form-box .form-group .form-radio {
+    display: flex;
+    align-items: flex-start;
+    padding-left: 0;
+    margin-right: 1.6rem;
+    cursor: pointer;
+}
+.form-box .form-group .form-radio .form-check-label {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 400;
+    cursor: pointer;
+}
+.form-box .form-group .form-radio .form-check-input {
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.28);
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border-radius: 50%;
+    margin: 0;
+    flex: 0 0 1.5rem;
+    position: static;
+    margin-right: 0.7rem;
+    cursor: pointer;
+}
+.form-box .form-group .form-radio .form-check-input:checked {
+    border-color: #FB3466;
+    background-image: url("data:image/svg+xml,%3Csvg width='14' height='14' viewBox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='14' height='14' rx='7' fill='%23FB3466'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-size: 0.875rem;
+    background-position: center;
+}
+.form-box .form-group-answer {
+    padding-top: 1rem;
+    margin-bottom: 1.45rem;
+    padding-bottom: 0;
+    border-bottom: 0;
+}
+.form-box .form-group label span {
+    opacity: 0.4;
+}
+.form-box textarea.form-control {
+    min-height: 6.3rem;
+    border-radius: 0.5rem;
+    padding: 1rem 0.9rem;
+    border: 0;
+}
+.form-box textarea.form-control::placeholder {
+    color: #60879D;
+}
+.form-box .btn {
+    padding: 0.675rem 2rem;
+}
+.form-box .form-control:focus {
+    box-shadow: none;
+}
+.form-box-feedback h2 {
+    margin-bottom: 1rem;
+}
+.form-box select {
+    height: 3.5rem;
+    width: 100%;
+    border: 0;
+    padding: 0.7rem 1rem;
+    font-size: 1rem;
+    color: #00466D;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border-radius: 0.5rem;
+    background-image: url("data:image/svg+xml,%3Csvg width='15' height='8' viewBox='0 0 15 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L7.5 7L14 1' stroke='%2300466D' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: calc(100% - 1.5rem);
+    cursor: pointer;
+}
+.form-box select:focus {
+    box-shadow: none;
+    outline: none;
+}
+.form-box-feedback .form-group {
+    border: 0;
+    padding-bottom: 0;
+}
+.form-box-feedback textarea.form-control {
+    min-height: 7.5rem;
+}
+.form-box-feedback .form-group-answer-large textarea.form-control {
+    min-height: 17.7rem;
+}
+.form-box-feedback-other {
+    margin-top: 3.7rem;
+    padding-bottom: 2.4rem;
+}
+.form-box-feedback-other h2 {
+    margin-bottom: 1rem;
+}
+.form-box-feedback-other .form-group label {
+    margin-bottom: 1.4rem;
+}
+.form-box-feedback-other .form-group textarea.form-control {
+    padding: 1rem 1.2rem;
+    min-height: 11.1rem;
+}
+.form-box-feedback-other .form-group {
+    margin-bottom: 1.3rem;
+    padding-bottom: 0;
+    border-bottom: 0;
+}
+.form-box-submitted {
+    text-align: center;
+}
+.form-box h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.5rem;
+    margin-bottom: 3rem;
+}
+.form-box-submitted h2 {
+    margin-bottom: 1.9rem;
+}
+.form-box-submitted .image-wrap {
+    margin-bottom: 1.3rem;
+}
+/* ----- /SECTION FORM ----- */
+/*  */
 /* ----- MEDIA ----- */
 @media(min-width: 1600px) {
     .header-steps .container {
@@ -2042,6 +2260,52 @@ h5 {
         height: 7.3rem;
     }
     /* ----- /SECTION SEARCH ----- */
+    /*  */
+    /* ----- SECTION FORM ----- */
+    .section-form {
+        padding-top: 4rem;
+        padding-bottom: 5rem;
+    }
+    .section-form .col {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+    .form-box .image-wrap {
+        width: 12rem;
+        height: 12rem;
+    }
+    .form-box-thanks h1 {
+        line-height: 2.375rem;
+    }
+    .form-box .image-wrap .icon {
+        width: 2.4rem;
+        bottom: 2.1rem;
+        right: 2.4rem;
+    }
+    .form-box {
+        padding: 2rem 1.5rem 2.5rem;
+        border-radius: 2rem;
+    }
+    .form-box-thanks {
+        min-height: 28.3rem;
+    }
+    .form-box h2 {
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+    .form-box .form-group label br {
+        display: none;
+    }
+    .form-box .form-group-answer {
+        padding-top: 0;
+    }
+    .form-box-feedback .form-group-answer-large textarea.form-control {
+        min-height: 12rem;
+    }
+    .form-box-feedback-other {
+        margin-top: 0;
+    }
+    /* ----- /SECTION FORM ----- */
     /*  */
 }
 /* ----- /MEDIA ----- */
