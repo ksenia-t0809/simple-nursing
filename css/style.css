@@ -301,6 +301,34 @@ h5 {
 .header-grey .menu li {
     margin-left: 1.1rem;
 }
+/* Header Shadow Small */
+.header-shadow-small .container {
+    max-width: 1010px;
+}
+.header-shadow-small {
+    border-bottom: 0;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.05), inset 0px -1px 0px rgba(0, 0, 0, 0.1);
+    padding: 1.6rem 0 1.1rem;
+}
+.header-shadow-small .logo {
+    margin-left: 2rem;
+    width: 13.9rem;
+}
+.header-shadow-small .menu li {
+    margin-left: 1.1rem;
+}
+.header-shadow-small .header-nav .buttons .btn {
+    padding: 0.475rem 2rem;
+}
+.header-shadow-small .header-nav .buttons .btn-outline-blue {
+    padding: 0.475rem 1.6rem;
+}
+.header-shadow-small .header-nav .buttons {
+    margin-left: 1.8rem;
+}
+.header-shadow-small .menu li:first-child {
+    margin-left: 0;
+}
 /* ----- /HEADER ----- */
 /*  */
 /* ----- SECTION MEMORY MUSIC ----- */
@@ -1818,6 +1846,193 @@ h5 {
 }
 /* ----- /SECTION FORM ----- */
 /*  */
+/* ----- SECTION SALE ----- */
+.section-sale {
+    padding-top: 2.3rem;
+    padding-bottom: 2.4rem;
+    background: #F8F9FA;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    min-height: calc(100vh - 88px);
+    align-items: center;
+}
+.section-sale .content-wrap {
+    background-image: url(../img/sale-bg.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    max-width: 75.5rem;
+    width: 100%;
+    margin-right: 11.3rem;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 3.8rem 6rem 7.3rem;
+    position: relative;
+}
+.section-sale .content-wrap .col-title {
+    text-align: center;
+    flex: 0 0 55.2%;
+    max-width: 55.2%;
+}
+.section-sale .content-wrap h1 {
+    color: #FA3567;
+    font-size: 6.875rem;
+    line-height: 5.5625rem;
+    font-weight: 800;
+    text-shadow: -1px 0 #ffffff, 0 1px #ffffff, 1px 0 #ffffff, 0 -1px #ffffff, 0px 5.3386px 0px #02334F;
+    margin-bottom: 2.5rem;
+}
+.section-sale .content-wrap .sale-title {
+    display: block;
+    margin: 0 auto -0.4rem;
+}
+.section-sale .content-wrap .btn {
+    font-size: 1.25rem;
+    padding: 1.125rem 3.9rem;
+}
+.section-sale .content-wrap .counter-wrap {
+    text-align: left;
+    color: rgb(255 255 255 / 50%);
+}
+.section-sale .content-wrap .counter-wrap p {
+    font-size: 1.125rem;
+    line-height: 1.25rem;
+    margin-bottom: 0.6rem;
+}
+.section-sale .content-wrap .counter-wrap {
+    max-width: 19.8rem;
+    margin: 3.3rem auto 0;
+}
+.section-sale .content-wrap .counter-wrap h5 {
+    color: #ffffff;
+    font-size: 1.125rem;
+    font-weight: 700;
+    line-height: 1.25rem;
+    margin-bottom: 1.8rem;
+}
+.counter {
+    display: flex;
+    flex-wrap: wrap;
+}
+.counter .count span {
+    display: block;
+    font-size: 2rem;
+    line-height: 2rem;
+    color: #ffffff;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+.counter .count {
+    margin-right: 3.5rem;
+    text-align: center;
+    position: relative;
+}
+.counter .count::after {
+    content: ':';
+    position: absolute;
+    right: -1.9rem;
+    top: 0.4rem;
+    font-size: 1.5rem;
+}
+.counter .count:last-child {
+    margin-right: -1rem;
+}
+.counter .count:last-child::after {
+    display: none;
+}
+.counter .count h6 {
+    color: rgb(255 255 255 / 40%);
+}
+.section-sale .col-image .image-wrap {
+    position: absolute;
+    width: 45rem;
+    right: -13.1rem;
+    height: 32.5rem;
+    top: -1.7rem;
+    z-index: 1;
+}
+.section-sale .col-image .image-wrap::before {
+    content: '';
+    background: radial-gradient(64.97% 43.22% at 50% 50%, rgba(255, 255, 255, 0.11) 0%, rgba(255, 255, 255, 0) 100%);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 27.3125rem;
+    height: 41.0625rem;
+    position: absolute;
+    top: -8.8rem;
+    right: 13rem;
+    z-index: -1;
+    transform: rotate(-90deg);
+}
+.section-sale .col-image .image-wrap::after {
+    content: '';
+    background: url(../img/sale-badge-bg-shadow.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 36.75rem;
+    height: 24.625rem;
+    top: 5rem;
+    left: 1.8rem;
+    z-index: -1;
+}
+.section-sale .col-image .image-wrap .badge-bg {
+    position: absolute;
+    width: 45.1rem;
+}
+.section-sale .col-image .image-wrap .badge-img {
+    position: absolute;
+    right: 0.1rem;
+    bottom: 0;
+    width: 43rem;
+    object-fit: contain;
+}
+.section-sale .col-image .image-wrap .badge-content {
+    position: absolute;
+    color: #ffffff;
+}
+.section-sale .col-image .image-wrap .badge-content {
+    font-size: 1.625rem;
+    line-height: 2.125rem;
+    font-weight: 400;
+    bottom: 4.5rem;
+    left: 11.5rem;
+    transform: rotate(-9.33deg);
+    text-align: center;
+}
+.section-sale .col-image .image-wrap .badge-content h2 {
+    font-size: 7.125rem;
+    line-height: 7.125rem;
+    font-style: italic;
+    font-weight: 800;
+    margin-top: 0.5rem;
+}
+/* Sale Extended */
+.section-sale-extended .col-image .image-wrap .badge-content h2 {
+    font-size: 4.8125rem;
+    line-height: 4.8125rem;
+    margin-bottom: 1rem;
+}
+.section-sale-extended .col-image .image-wrap .badge-content h3 {
+    font-size: 1.9375rem;
+    font-weight: 800;
+    line-height: 1.9375rem;
+    font-style: italic;
+    margin-left: 0.3rem;
+}
+.section-sale-extended .col-image .image-wrap .badge-content {
+    left: 13rem;
+    text-align: left;
+    bottom: 5.2rem;
+}
+.section-sale-extended .col-image .image-wrap .badge-content > div {
+    margin-left: 0.7rem;
+}
+.section-sale-extended .col-image .image-wrap .badge-img {
+    right: -1.6rem;
+}
+/* ----- /SECTION SALE ----- */
+/*  */
 /* ----- MEDIA ----- */
 @media(min-width: 1600px) {
     .header-steps .container {
@@ -1830,6 +2045,38 @@ h5 {
         padding: 2.3rem 4.4rem 3.8rem;
     }
     /* ----- /SECTION STEPS ----- */
+    /*  */
+    /* ----- SECTION SALE ----- */
+    .section-sale .content-wrap {
+        background-position-x: center;
+        margin: 0 1rem;
+        padding: 3.8rem 2rem 8.9rem;
+    }
+    .section-sale .col-image .image-wrap {
+        right: -3rem;
+        width: 42rem;
+        height: 29.7rem;
+    }
+    .section-sale .col-image .image-wrap .badge-content h2 {
+        font-size: 6rem;
+        line-height: 6rem;
+    }
+    .section-sale .col-image .image-wrap .badge-content {
+        bottom: 3.5rem;
+        left: 12.1rem;
+    }
+    .section-sale .col-image .image-wrap .badge-img {
+        width: 35rem;
+    }
+    /* Sale Extended */
+    .section-sale-extended .col-image .image-wrap .badge-img {
+        right: 0rem;
+    }
+    .section-sale-extended .col-image .image-wrap .badge-content {
+        bottom: 2.5rem;
+        left: 11.6rem;
+    }
+    /* ----- /SECTION SALE ----- */
     /*  */
 }
 @media(max-width: 1199px) {
@@ -1889,6 +2136,63 @@ h5 {
         padding: 1rem 0.75rem;
     }
     /* ----- /SECTION BLOG SINGLE ----- */
+    /*  */
+    /* ----- SECTION SALE ----- */
+    .section-sale .col-image .image-wrap {
+        right: -3rem;
+        width: 32.7rem;
+        height: 23.9rem;
+    }
+    .section-sale .col-image .image-wrap::before {
+        width: 20.3125rem;
+        height: 34.0625rem;
+        right: 8rem;
+    }
+    .section-sale .col-image .image-wrap::after {
+        width: 29.75rem;
+        height: 20.625rem;
+        top: 3rem;
+    }
+    .section-sale .col-image .image-wrap .badge-content {
+        bottom: 3.5rem;
+        left: 8.2rem;
+        font-size: 1.5rem;
+        line-height: 1.5rem;
+    }
+    .section-sale .col-image .image-wrap .badge-content h2 {
+        font-size: 4.5rem;
+        line-height: 4.5rem;
+    }
+    .section-sale .col-image .image-wrap .badge-img {
+        width: 29.8rem;
+        bottom: 0.4rem;
+    }
+    .section-sale .content-wrap .counter-wrap {
+        margin-top: 1.2rem;
+    }
+    .section-sale .content-wrap .sale-title {
+        max-width: 16rem;
+        margin-bottom: 0.5rem;
+    }
+    .section-sale .content-wrap h1 {
+        font-size: 5.5rem;
+        line-height: 5.5rem;
+        margin-bottom: 1.5rem;
+    }
+    /* Sale Extended */
+    .section-sale-extended .col-image .image-wrap .badge-content h2 {
+        font-size: 3.5rem;
+        line-height: 3.5rem;
+        margin-bottom: 0.5rem;
+    }
+    .section-sale-extended .col-image .image-wrap .badge-content h3 {
+        font-size: 1.5rem;
+        line-height: 1.5rem;
+    }
+    .section-sale-extended .col-image .image-wrap .badge-content > div {
+        margin: 0;
+    }
+    /* ----- /SECTION SALE ----- */
     /*  */
 }
 @media(max-width: 991px) {
@@ -2016,6 +2320,39 @@ h5 {
         width: 39rem;
     }
     /* ----- /SECTION SEARCH ----- */
+    /*  */
+    /* ----- SECTION SALE ----- */
+    .section-sale .content-wrap {
+        background-size: 80rem;
+        margin: 0;
+    }
+    .section-sale .content-wrap .col-title {
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding-top: 8rem;
+        order: 2;
+    }
+    .section-sale .col-image .image-wrap {
+        width: 32.7rem;
+        height: 23.9rem;
+        top: -17.4rem;
+        right: -2rem;
+    }
+    .section-sale {
+        padding-top: 14rem;
+    }
+    .section-sale .col-image .image-wrap::before {
+        top: 2.2rem;
+        right: 0rem;
+        height: 36.0625rem;
+        background: radial-gradient(64.97% 43.22% at 50% 50%, rgba(255, 255, 255, 0.11) 0%, rgba(255, 255, 255, 0) 80%);
+    }
+    .section-sale .col-image .image-wrap::after {
+        top: 6rem;
+        left: auto;
+        right: -3rem;
+    }
+    /* ----- /SECTION SALE ----- */
     /*  */
 }
 @media(max-width: 767px) {
@@ -2306,6 +2643,73 @@ h5 {
         margin-top: 0;
     }
     /* ----- /SECTION FORM ----- */
+    /*  */
+    /* ----- SECTION SALE ----- */
+    .section-sale .col-image .image-wrap {
+        width: 21.7rem;
+        height: 16.1rem;
+        top: -7.4rem;
+        right: 0;
+        left: 0;
+        margin: 0 auto;
+    }
+    .section-sale .col-image .image-wrap .badge-content {
+        bottom: 2.2rem;
+        left: 6.2rem;
+        font-size: 1.25rem;
+        line-height: 1.25rem;
+    }
+    .section-sale .col-image .image-wrap .badge-content h2 {
+        font-size: 2.5rem;
+        line-height: 2.5rem;
+    }
+    .section-sale .col-image .image-wrap .badge-img {
+        width: 19.8rem;
+        bottom: 0.6rem;
+    }
+    .section-sale .content-wrap {
+        padding: 0;
+        padding-bottom: 2rem;
+    }
+    .section-sale .content-wrap .col-title {
+        padding-top: 10rem;
+    }
+    .section-sale .col-image .image-wrap::before {
+        top: -0.8rem;
+    }
+    .section-sale .col-image .image-wrap::after {
+        width: 21.75rem;
+        height: 14.625rem;
+        right: 0;
+        left: 0;
+        margin: 0 auto;
+    }
+    .section-sale {
+        padding-top: 8rem;
+    }
+    .section-sale .content-wrap .sale-title {
+        max-width: 13rem;
+    }
+    .section-sale .content-wrap h1 {
+        font-size: 4rem;
+        line-height: 4rem;
+    }
+    .section-sale .content-wrap .btn {
+        font-size: 1rem;
+        padding: 0.825rem 2.5rem;
+    }
+    /* Sale Extended */
+    .section-sale-extended .col-image .image-wrap .badge-content h3 {
+        font-size: 1.125rem;
+        line-height: 1.125rem;
+    }
+    .section-sale-extended .col-image .image-wrap .badge-content {
+        left: 5.8rem;
+    }
+    .section-sale-extended .col-image .image-wrap .badge-img {
+        right: -0.7rem;
+    }
+    /* ----- /SECTION SALE ----- */
     /*  */
 }
 /* ----- /MEDIA ----- */
