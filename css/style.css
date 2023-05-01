@@ -2033,6 +2033,247 @@ h5 {
 }
 /* ----- /SECTION SALE ----- */
 /*  */
+/* ----- SECTION PRICING CARDS ----- */
+.section-pricing-cards {
+    background-color: #ffffff;
+    padding-top: 6.2rem;
+}
+.section-pricing-cards .nav-tabs {
+    justify-content: center;
+    border: 0;
+}
+.section-pricing-cards .nav-tabs .nav-link {
+    font-weight: 800;
+    color: #888888;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    border-radius: 0;
+    border: 0;
+    border-bottom: 6px solid transparent;
+    margin: 0;
+    padding: 0.3rem 1.485rem 0.95rem;
+    letter-spacing: -0.16px;
+}
+.section-pricing-cards .nav-tabs .nav-link.active {
+    color: #00709C;
+    border-bottom-color: #00709C;
+}
+.section-pricing-cards .tabs-content-wrap {
+    background: #F8F9FA;
+    padding-top: 8.3rem;
+    padding-bottom: 4rem;
+    min-height: calc(84vh - 5.5rem);
+}
+.section-pricing-cards .tabs-content-wrap .col {
+    padding: 0 1rem;
+    margin-bottom: 3.1rem;
+}
+.pricing-card {
+    background: #FFFFFF;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.12);
+    border-radius: 0.5rem;
+    position: relative;
+    text-align: center;
+    width: 13.9375rem;
+    padding: 0.5rem 0.5rem 0.9rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    min-height: 22.9rem;
+    height: 100%;
+}
+.pricing-card .card-title {
+    border: 1px solid #E8E8E8;
+    border-radius: 0.5rem;
+    color: #666666;
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 1.1rem 0.5rem;
+    margin-bottom: 2.5rem;
+}
+.pricing-card .price {
+    font-weight: 700;
+    color: #24292E;
+    font-size: 2rem;
+    letter-spacing: -0.16px;
+    line-height: 1.5rem;
+    margin-bottom: 4.5rem;
+}
+.pricing-card .price span {
+    color: #655F5F;
+    font-size: 1.5rem;
+    margin-left: -0.4rem;
+    margin-right: 0rem;
+}
+.pricing-card .grey-badge {
+    color: #999999;
+    font-weight: 700;
+    background: #F6F6F6;
+    width: 7.875rem;
+    margin: 0 auto 2.1rem;
+    padding: 0.7rem 0;
+}
+.pricing-card .btn {
+    padding: 0.6rem 1.5rem;
+    font-weight: 700;
+}
+.pricing-card .btn-outline {
+    font-size: 0.875rem;
+    line-height: 1.3rem;
+    text-transform: uppercase;
+    color: #24292E;
+    border: 1px solid #24292E;
+}
+.pricing-card .btn-outline:hover {
+    background-color: #24292E;
+    color: #ffffff;
+}
+.pricing-card p {
+    font-weight: 700;
+    color: #655F5F;
+    font-size: 0.75rem;
+    margin-bottom: 0.9rem;
+    line-height: 1rem;
+}
+.pricing-card .sale-badge {
+    position: absolute;
+    top: -2.1rem;
+    left: -1.3rem;
+    width: 4.875rem;
+    height: 4.875rem;
+    background-image: url(../img/sale-badge-bg.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-weight: 700;
+    font-size: 0.75rem;
+    line-height: 0.75rem;
+    color: #ffffff;
+}
+.pricing-card .sale-badge span {
+    font-size: 0.5rem;
+}
+.pricing-card-sale .price {
+    font-size: 1.0625rem;
+    color: #000000;
+    display: block;
+    width: 6.375rem;
+    margin: 0 auto;
+    position: relative;
+    height: auto;
+    margin-bottom: 2.6rem;
+}
+.pricing-card-sale .price .old-price {
+    background: #F3F3F3;
+    border: 1px solid rgb(222 222 222 / 60%);
+    transform: rotate(-1.92deg);
+    border-radius: 0.3125rem;
+    color: #ADADAD;
+    height: 2.625rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.pricing-card-sale .card-title {
+    margin-bottom: 1.6rem;
+}
+.pricing-card-sale .price .new-price {
+    background: #FFFFFF;
+    border: 0.611199px solid #DEDEDE;
+    border-radius: 0.3125rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 6.375rem;
+    height: 2.625rem;
+    transform: rotate(-16.92deg);
+    position: absolute;
+    top: 1.2rem;
+    right: -0.6rem;
+}
+.pricing-card-sale .price .new-price span {
+    font-size: 1.0625rem;
+    color: #EA0000;
+    margin: 0;
+    margin-right: 0.1rem;
+}
+.pricing-card .total {
+    font-size: 1rem;
+    color: #999999;
+    font-weight: 700;
+}
+.pricing-card .save-badge {
+    width: 7.5625rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(../img/save-badge-bg.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    font-weight: 700;
+    color: #2BB004;
+    font-size: 1rem;
+    margin: 0 auto auto;
+}
+.pricing-card-sale .mt-auto {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    min-height: 9.1rem;
+}
+.pricing-card-popular {
+    box-shadow: 0px 32px 88px rgba(0, 0, 0, 0.24);
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    padding-top: 0.3rem;
+}
+.pricing-card-popular .most-popular {
+    position: absolute;
+    top: -3rem;
+    color: #00709C;
+    font-weight: 700;
+    text-align: center;
+    left: 0;
+    right: 0;
+    font-size: 0.875rem;
+}
+.pricing-card-popular::before {
+    content: '';
+    background: #FAD74F;
+    height: 1.0625rem;
+    position: absolute;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    left: 0;
+    right: 0;
+    top: -1.1rem;
+}
+.pricing-card-popular .sale-badge {
+    left: -1.4rem;
+}
+.pricing-card-popular .btn-outline {
+    border-color: #FAD74F;
+    background-color: #FAD74F;
+}
+.pricing-card-popular .btn-outline:hover {
+    border-color: #24292E;
+    color: #FAD74F;
+}
+.section-pricing-cards .tabs-content-wrap .bottom-content {
+    text-align: center;
+}
+.section-pricing-cards .tabs-content-wrap .bottom-content h6 {
+    font-weight: 700;
+    color: #282323;
+    margin-bottom: 0.2rem;
+}
+/* ----- /SECTION PRICING CARDS ----- */
+/*  */
 /* ----- MEDIA ----- */
 @media(min-width: 1600px) {
     .header-steps .container {
@@ -2099,6 +2340,10 @@ h5 {
     }
     .header .menu li {
         margin-left: 1rem;
+    }
+    /* Header Shadow Small */
+    .header-shadow-small .logo {
+        margin-left: 0;
     }
     /* ----- /HEADER ----- */
     /*  */
@@ -2353,6 +2598,15 @@ h5 {
         right: -3rem;
     }
     /* ----- /SECTION SALE ----- */
+    /*  */
+    /* ----- SECTION PRICING CARDS ----- */
+    .pricing-card {
+        width: 100%;
+    }
+    .pricing-card .sale-badge {
+        left: -1.7rem;
+    }
+    /* ----- /SECTION PRICING CARDS ----- */
     /*  */
 }
 @media(max-width: 767px) {
@@ -2710,6 +2964,49 @@ h5 {
         right: -0.7rem;
     }
     /* ----- /SECTION SALE ----- */
+    /*  */
+    /* ----- SECTION PRICING CARDS ----- */
+    .section-pricing-cards .nav-tabs {
+        flex-direction: column;
+        align-items: center;
+        padding: 0 1rem;
+    }
+    .section-pricing-cards .nav-tabs .nav-link {
+        font-size: 1rem;
+        padding: 0.5rem 1.485rem;
+        width: 100%;
+    }
+    .section-pricing-cards .nav-tabs .nav-item {
+        width: 100%;
+        margin-bottom: 0.3rem;
+    }
+    .section-pricing-cards .nav-tabs .nav-item:last-child {
+        margin-bottom: 0;
+    }
+    .section-pricing-cards {
+        padding-top: 3rem;
+    }
+    .section-pricing-cards .tabs-content-wrap {
+        padding-top: 4rem;
+    }
+    .pricing-card {
+        max-width: 14.125rem;
+        margin: 0 auto;
+    }
+    .pricing-card .card-title {
+        font-size: 1.25rem;
+        padding: 0.875rem 0.5rem;
+    }
+    .section-pricing-cards .tabs-content-wrap .col {
+        margin-bottom: 3.1rem;
+    }
+    .pricing-card-popular {
+        margin-top: 2rem;
+    }
+    .section-pricing-cards .tabs-content-wrap .row {
+        align-items: flex-start;
+    }
+    /* ----- /SECTION PRICING CARDS ----- */
     /*  */
 }
 /* ----- /MEDIA ----- */
