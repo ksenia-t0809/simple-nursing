@@ -29,7 +29,9 @@ a:hover {
     text-decoration: none;
 }
 .page-wrap {
+    position: relative;
     overflow: hidden;
+    min-height: 100vh;
 }
 .main-content {
     position: relative;
@@ -159,6 +161,15 @@ h5 {
 }
 .btn-yellow-arrow {
     background-color: #FBD850;
+}
+.btn-black {
+    background-color: #272323;
+    color: #ffffff;
+    border-radius: 2.5rem;
+}
+.btn-black:hover {
+    background-color: #FCEE91;
+    color: #272323;
 }
 /* ----- /BUTTONS ----- */
 /*  */
@@ -2081,6 +2092,33 @@ h5 {
     justify-content: flex-start;
     min-height: 22.9rem;
     height: 100%;
+    z-index: 1;
+}
+.pricing-card:hover {
+    box-shadow: 0px 32px 88px rgba(0, 0, 0, 0.24);
+    transform: scale(1.04,1.04);
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+}
+.pricing-card::before {
+    content: '';
+    background: #FAD74F;
+    position: absolute;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    left: 0;
+    right: 0;
+    top: 0;
+    visibility: hidden;
+    opacity: 0;
+    z-index: -1;
+    transition: 0.4s;
+}
+.pricing-card:hover::before {
+    visibility: visible;
+    opacity: 1;
+    top: -1.0625rem;
+    height: 1.0625rem;
 }
 .pricing-card .card-title {
     border: 1px solid #E8E8E8;
@@ -2123,10 +2161,16 @@ h5 {
     text-transform: uppercase;
     color: #24292E;
     border: 1px solid #24292E;
+    transition: 0.4s;
 }
-.pricing-card .btn-outline:hover {
-    background-color: #24292E;
-    color: #ffffff;
+.pricing-card .btn-outline:focus,
+.pricing-card .btn-outline:active {
+    box-shadow: none;
+}
+.pricing-card:hover .btn-outline {
+    background-color: #FAD74F;
+    border-color: #FAD74F;
+    color: #24292E;
 }
 .pricing-card p {
     font-weight: 700;
@@ -2243,15 +2287,10 @@ h5 {
     font-size: 0.875rem;
 }
 .pricing-card-popular::before {
-    content: '';
-    background: #FAD74F;
+    visibility: visible;
+    opacity: 1;
+    top: -1.0625rem;
     height: 1.0625rem;
-    position: absolute;
-    border-top-left-radius: 0.5rem;
-    border-top-right-radius: 0.5rem;
-    left: 0;
-    right: 0;
-    top: -1.1rem;
 }
 .pricing-card-popular .sale-badge {
     left: -1.4rem;
@@ -2259,10 +2298,6 @@ h5 {
 .pricing-card-popular .btn-outline {
     border-color: #FAD74F;
     background-color: #FAD74F;
-}
-.pricing-card-popular .btn-outline:hover {
-    border-color: #24292E;
-    color: #FAD74F;
 }
 .section-pricing-cards .tabs-content-wrap .bottom-content {
     text-align: center;
@@ -2273,6 +2308,363 @@ h5 {
     margin-bottom: 0.2rem;
 }
 /* ----- /SECTION PRICING CARDS ----- */
+/*  */
+/* ----- SALE BANNER ----- */
+.sale-banner {
+    background-color: #1C94C3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 5.5rem;
+    overflow: hidden;
+    z-index: -1;
+    transform: translateY(-100%);
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.4s;
+}
+.sale-banner.active {
+    transform: none;
+    visibility: visible;
+    opacity: 1;
+}
+.sale-banner::before, .sale-banner::after {
+    content: '';
+    background-image: url(../img/sale-banner-bg.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 27.3125rem;
+    width: 31.1%;
+    position: absolute;
+    top: -8.6%;
+    z-index: -1;
+}
+.sale-banner::before {
+    left: 5.9%;
+}
+.sale-banner::after {
+    right: 10%;
+}
+.sale-banner h4 {
+    color: #ffffff;
+    margin-bottom: 0.1rem;
+    margin-right: 2rem;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    font-weight: 700;
+    margin-left: 0.9rem;
+    letter-spacing: 0;
+}
+.sale-banner .btn {
+    font-size: 0.875rem;
+    padding: 0.51rem 1.4rem;
+    line-height: 1.4rem;
+}
+.sale-banner img {
+    margin-left: -5.4rem;
+}
+/* ----- /SALE BANNER ----- */
+/*  */
+/* ----- SECTION PRICING ----- */
+.section-pricing {
+    padding-top: 6.8rem;
+}
+.section-pricing .content-wrap {
+    background-image: url(../img/pricing-banner-bg.svg);
+    max-width: 72.6375rem;
+    margin-right: 7.9rem;
+    padding: 6.2rem 0 7.3rem;
+}
+.section-pricing .content-wrap .sale-title {
+    width: 22.3rem;
+}
+.section-pricing .content-wrap h1 {
+    font-size: 7.125rem;
+    margin-bottom: 4.3rem;
+}
+.section-pricing .content-wrap .col-title {
+    padding-left: 1.8rem;
+    flex: 0 0 53.2%;
+    max-width: 53.2%;
+}
+.section-pricing .col-image .image-wrap {
+    top: -10.3rem;
+    left: -2.5rem;
+    right: auto;
+    width: 29.8rem;
+    height: 18.2rem;
+}
+.section-pricing .col-image .image-wrap .badge-content {
+    font-size: 1.1875rem;
+    line-height: 1.25rem;
+    left: 6.7rem;
+    transform: rotate(-14.71deg);
+    text-align: left;
+    bottom: 6.4rem;
+}
+.section-pricing .col-image .image-wrap .badge-content h2 {
+    font-size: 4.375rem;
+    line-height: 4.375rem;
+    margin-top: 0.4rem;
+}
+.section-pricing .col-image .image-wrap .badge-content > div {
+    margin-left: 1.6rem;
+}
+.section-pricing .content-wrap .counter-wrap {
+    max-width: 24.25rem;
+    margin: 0;
+    margin-bottom: -0.4rem;
+}
+.section-pricing .content-wrap .col-image {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-left: 1.1rem;
+}
+.section-pricing .content-wrap .counter {
+    background: #01476E;
+    border-radius: 1rem;
+    padding: 1.1rem 2rem 0.5rem 2rem;
+}
+.section-pricing .content-wrap .counter-wrap h5 {
+    margin-bottom: 1.1rem;
+}
+.section-pricing .content-wrap .counter-wrap .counter-title {
+    padding-left: 2rem;
+}
+.section-pricing .col-image .image-wrap::before {
+    width: 12.6875rem;
+    height: 12.375rem;
+    background: #FFFFFF;
+    filter: blur(150px);
+    top: 0.6rem;
+    right: auto;
+    left: -0.3rem;
+    z-index: -1;
+}   
+.section-pricing .col-image .image-wrap::after {
+    display: none;
+}
+/* Pricing extended */
+.section-pricing-extended .col-image .image-wrap .badge-content h3 {
+    font-weight: 800;
+    font-style: italic;
+    font-size: 1.5625rem;
+    line-height: 1.75rem;
+}
+.section-pricing-extended .col-image .image-wrap .badge-content {
+    left: 6.3rem;
+    bottom: 5.1rem;
+}
+.section-pricing-extended .col-image .image-wrap .badge-content h2 {
+    margin-bottom: 0rem;
+    margin-top: 0.3rem;
+}
+.section-pricing-extended .col-image .image-wrap .badge-content > div {
+    margin-left: 0.8rem;
+}
+/* ----- /SECTION PRICING ----- */
+/*  */
+/* ----- PRICING MODAL ----- */
+.modal {
+    background: rgb(18 50 68 / 50%);
+}
+.modal.show {
+    display: block;
+}
+.modal .modal-content {
+    border-radius: 2rem;
+    border: 0;
+    overflow: hidden;
+}
+.pricing-modal .modal-dialog {
+    max-width: 60.625rem;
+}
+.pricing-modal .modal-body {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 0 0 3.5rem;
+}
+.pricing-modal h3 {
+    color: #000000;
+    font-weight: 700;
+    letter-spacing: 0;
+    margin-bottom: 0rem;
+}
+.pricing-modal .modal-body .col-title {
+    padding: 3.8rem 0;
+    flex: 0 0 40.7%;
+    max-width: 40.7%;
+}
+.pricing-modal .col-title p {
+    font-size: 1.25rem;
+    color: #000000;
+    line-height: 1.75rem;
+}
+.pricing-modal .price {
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    margin-top: 1.75rem;
+    margin-bottom: 2.3rem;
+}
+.pricing-modal .price .old-price {
+    font-size: 2rem;
+    font-weight: 400;
+    color: #3E3E3E;
+    line-height: 0.7rem;
+    margin-right: 1.3rem;
+    position: relative;
+}
+.pricing-modal .price .old-price::before {
+    content: '';
+    background-image: url("data:image/svg+xml,%3Csvg width='58' height='26' viewBox='0 0 58 26' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='1.41479' width='61.1607' height='3.92525' rx='1.96263' transform='rotate(21.1257 1.41479 0)' fill='%23D7546D' fill-opacity='0.9'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 3.875rem;
+    height: 1.55rem;
+    position: absolute;
+    inset: 0;
+    top: -0.4rem;
+}
+.pricing-modal .price .new-price {
+    font-size: 3rem;
+}
+.pricing-modal .yellow-badge {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #272323;
+    background-color: #FCEE91;
+    text-align: center;
+    border-radius: 2.5rem;
+    display: inline-block;
+    padding: 0.95rem 2rem;
+    margin-bottom: 2rem;
+}
+.pricing-modal .grey-box {
+    background: #F0F2F4;
+    border-radius: 1rem;
+    padding: 1.5rem 0 1.6rem;
+    margin-bottom: 2rem;
+}
+.pricing-modal .grey-box li {
+    display: flex;
+    font-size: 0.875rem;
+    flex-wrap: wrap;
+    line-height: 1.25rem;
+    color: #000000;
+    padding-left: 0.9rem;
+    flex: 0 0 45.2%;
+    max-width: 45.2%;
+    align-items: flex-start;
+    margin-bottom: 0.8rem;
+}
+.pricing-modal .grey-box li strong {
+    font-weight: 700;
+}
+.pricing-modal .grey-box li img {
+    margin-right: 0.5rem;
+    width: 1rem;
+    flex: 0 0 1rem;
+    height: 1.3rem;
+}
+.pricing-modal .grey-box ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+.pricing-modal .grey-box li:last-child {
+    flex: 0 0 100%;
+    max-width: 100%;
+    border-top: 1px solid rgba(217, 217, 217, 0.27);
+    margin-bottom: 0;
+    padding-top: 1rem;
+    padding-right: 2rem;
+}
+.pricing-modal .grey-box li > div {
+    flex: 1;
+}
+.pricing-modal .grey-box li:nth-child(2n) {
+    flex: 1;
+    max-width: 100%;
+}
+.pricing-modal .buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 17.1rem;
+}
+.pricing-modal .buttons .btn {
+    text-transform: uppercase;
+    font-size: 1rem;
+    width: 100%;
+    padding: 0.875rem 2.1rem;
+    margin-bottom: 0.9rem;
+}
+.pricing-modal .buttons .link {
+    color: #000000;
+}
+.pricing-modal .buttons .link:hover {
+    color: #FCEE91;
+}
+.pricing-modal .modal-body .col-image {
+    position: relative;
+    overflow: hidden;
+    text-align: right;
+    padding: 7.7rem 3.2rem;
+    z-index: 1;
+}
+.pricing-modal .modal-body .col-image::before {
+    content: '';
+    background-image: url(../img/modal-bg.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 94%;
+    background-position: left;
+    border-top-right-radius: 2rem;
+    z-index: -1;
+}
+.pricing-modal .modal-body .col-image .modal-img {
+    position: absolute;
+    bottom: -17.3rem;
+    right: -7rem;
+    width: 116.3%;
+    max-width: 116.3%;
+}
+.pricing-modal .modal-body .col-image h2 {
+    font-size: 5rem;
+    font-weight: 800;
+    line-height: 4.3125rem;
+    color: #ffffff;
+    margin-bottom: 0.9rem;
+    margin-right: 0.4rem;
+}
+.pricing-modal .modal-body .col-image h3 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #ffffff;
+}
+.pricing-modal .btn-close {
+    width: 2rem;
+    height: 2rem;
+    position: absolute;
+    right: 2rem;
+    top: 1.9rem;
+    border: 0;
+    background-color: transparent;
+    background-image: url("data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M24 8L8 24' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M8 8L24 24' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 10;
+}
+/* ----- /PRICING MODAL ----- */
 /*  */
 /* ----- MEDIA ----- */
 @media(min-width: 1600px) {
@@ -2318,6 +2710,29 @@ h5 {
         left: 11.6rem;
     }
     /* ----- /SECTION SALE ----- */
+    /*  */
+    /* ----- SECTION PRICING ----- */
+    .section-pricing .col-image .image-wrap {
+        right: auto;
+        width: 29.8rem;
+        height: 18.2rem;
+    }
+    .section-pricing .col-image .image-wrap .badge-content {
+        left: 6.7rem;
+        bottom: 6.4rem;
+    }
+    .section-pricing .col-image .image-wrap .badge-content h2 {
+        font-size: 4.375rem;
+        line-height: 4.375rem;
+    }
+    .section-pricing .content-wrap {
+        padding: 6.2rem 0 9.3rem;
+    }
+    /* Pricing Extended */
+    .section-pricing-extended .col-image .image-wrap .badge-content {
+        bottom: 5.1rem;
+    }
+    /* ----- /SECTION PRICING ----- */
     /*  */
 }
 @media(max-width: 1199px) {
@@ -2438,6 +2853,39 @@ h5 {
         margin: 0;
     }
     /* ----- /SECTION SALE ----- */
+    /*  */
+    /* ----- SALE BANNER ----- */
+    .sale-banner img {
+        margin-left: 0rem;
+    }
+    .sale-banner::before {
+        left: -4.1%;
+    }
+    .sale-banner::after {
+        right: -2%;
+    }
+    /* ----- /SALE BANNER ----- */
+    /*  */
+    /* ----- SECTION PRICING ----- */
+    .section-pricing .col-image .image-wrap::before {
+        width: 12.6875rem;
+        height: 12.375rem;
+        right: auto;
+    }
+    .section-pricing .col-image .image-wrap {
+        width: 29.8rem;
+        height: 18.2rem;
+        top: -13.3rem;
+    }
+    .section-pricing .col-image .image-wrap .badge-content {
+        bottom: 6rem;
+        left: 7.2rem;
+    }
+    /* Pricing Extended */
+    .section-pricing-extended .col-image .image-wrap .badge-content {
+        bottom: 5.3rem;
+    }
+    /* ----- /SECTION PRICING ----- */
     /*  */
 }
 @media(max-width: 991px) {
@@ -2607,6 +3055,69 @@ h5 {
         left: -1.7rem;
     }
     /* ----- /SECTION PRICING CARDS ----- */
+    /*  */
+    /* ----- SECTION PRICING ----- */
+    .section-pricing .content-wrap .col-title {
+        order: 1;
+        padding-top: 6.5rem;
+    }
+    .section-pricing .content-wrap .col-image {
+        order: 2;
+        position: static;
+    }
+    .section-pricing .col-image .image-wrap {
+        left: auto;
+        top: -7rem;
+        right: 1rem;
+        width: 29.8rem;
+        height: 18.2rem;
+    }
+    .section-pricing .col-image .image-wrap .badge-content {
+        bottom: 6.2rem;
+    }
+    .section-pricing {
+        padding-top: 8.8rem;
+    }
+    .section-pricing .content-wrap .counter-wrap {
+        margin: 2rem auto;
+    }
+    .section-pricing .content-wrap {
+        background-size: 109rem;
+    }
+    /* Pricing Extended */
+    .section-pricing-extended .col-image .image-wrap .badge-content {
+        bottom: 5.2rem;
+    }
+    /* ----- /SECTION PRICING ----- */
+    /*  */
+    /* ----- PRICING MODAL ----- */
+    .pricing-modal .modal-dialog {
+        max-width: 45.625rem;
+    }
+    .pricing-modal .modal-body {
+        padding-left: 1.5rem;
+    }
+    .pricing-modal .modal-body .col-title {
+        padding: 2rem 0;
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+    .pricing-modal .modal-body .col-image .modal-img {
+        bottom: -11.1rem;
+        right: -5rem;
+    }
+    .pricing-modal .modal-body .col-image {
+        padding: 9.7rem 1.5rem;
+    }
+    .pricing-modal .modal-body .col-image h2 {
+        font-size: 4rem;
+        line-height: 3.5rem;
+        margin-right: 0;
+    }
+    .pricing-modal .modal-body .col-image h3 {
+        font-size: 2rem;
+    }
+    /* ----- /PRICING MODAL ----- */
     /*  */
 }
 @media(max-width: 767px) {
@@ -3007,6 +3518,128 @@ h5 {
         align-items: flex-start;
     }
     /* ----- /SECTION PRICING CARDS ----- */
+    /*  */
+    /* ----- SALE BANNER ----- */
+    .sale-banner {
+        top: 4.7rem;
+        text-align: center;
+        padding: 1rem 0 1.5rem;
+        flex-direction: column;
+    }
+    .sale-banner::before, .sale-banner::after {
+        width: 60%;
+        background-position-y: center;
+        height: 100%;
+        top: 0;
+    }
+    .sale-banner::before {
+        left: -23%;
+    }
+    .sale-banner::after {
+        right: -18%;
+    }
+    .sale-banner img {
+        margin-bottom: 0.75rem;
+    }
+    .sale-banner h4 {
+        max-width: 16rem;
+        line-height: 2rem;
+        margin: 0 auto 1rem;
+    }
+    /* ----- /SALE BANNER ----- */
+    /*  */
+    /* ----- SECTION PRICING ----- */
+    .section-pricing .col-image .image-wrap {
+        width: 22.8rem;
+        height: 13.9rem;
+        top: -4.4rem;
+    }
+    .section-pricing .col-image .image-wrap .badge-content {
+        bottom: 4.6rem;
+    }
+    .section-pricing .col-image .image-wrap .badge-content > div {
+        margin-left: 0;
+    }
+    .section-pricing {
+        padding-top: 6rem;
+    }
+    .section-pricing .content-wrap .counter-wrap .counter-title {
+        padding-left: 0;
+    }
+    .section-pricing .counter .count {
+        margin-right: 0;
+        flex: 0 0 auto;
+    }
+    .section-pricing .content-wrap .counter {
+        padding: 1.1rem 1rem 0.5rem 1rem;
+        justify-content: space-between;
+    }
+    .section-pricing .counter .count::after {
+        right: -1.1rem;
+    }
+    /* Pricing Extended */
+    .section-pricing-extended .col-image .image-wrap .badge-content {
+        bottom: 3.8rem;
+    }
+    .section-pricing-extended .col-image .image-wrap .badge-content h3 {
+        font-size: 1.125rem;
+        line-height: 1.5rem;
+    }
+    /* ----- /SECTION PRICING ----- */
+    /*  */
+    /* ----- PRICING MODAL ----- */
+    .pricing-modal .modal-dialog {
+        max-width: 22.5rem;
+        margin: auto;
+    }
+    .pricing-modal .modal-body .col-title {
+        flex: 0 0 100%;
+        max-width: 100%;
+        order: 2;
+        text-align: center;
+        padding: 2rem 1rem;
+    }
+    .pricing-modal .modal-body .col-image::before {
+        display: none;
+    }
+    .pricing-modal .modal-body {
+        padding: 0;
+    }
+    .pricing-modal .modal-body .col-image {
+        padding: 4.5rem 1.5rem;
+        text-align: center;
+        overflow: visible;
+        background-color: #E8486B;
+    }
+    .pricing-modal .modal-body .col-image .modal-img {
+        display: none;
+    }
+    .pricing-modal .price {
+        justify-content: center;
+    }
+    .pricing-modal .buttons {
+        margin: 0 auto;
+    }
+    .pricing-modal .modal-body .col-image h2 {
+        font-size: 2.5rem;
+        line-height: 2.5rem;
+        margin-bottom: 0.1rem;
+    }
+    .pricing-modal .modal-body .col-image h3 {
+        font-size: 1.5rem;
+    }
+    .pricing-modal .btn-close {
+        right: 1rem;
+        top: 1rem;
+    }
+    .pricing-modal .grey-box {
+        text-align: left;
+    }
+    .pricing-modal .grey-box li {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+    /* ----- /PRICING MODAL ----- */
     /*  */
 }
 /* ----- /MEDIA ----- */
