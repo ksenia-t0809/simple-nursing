@@ -2666,6 +2666,77 @@ h5 {
 }
 /* ----- /PRICING MODAL ----- */
 /*  */
+/* ----- SECTION BANNER NCLEX ----- */
+.section-banner-nclex {
+    background-image: url(../img/nclex-banner-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    padding-bottom: 3.4rem;
+}
+.section-banner-nclex .container-fluid {
+    padding: 0 4.7rem;
+}
+.section-banner-nclex .col {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.section-banner-nclex h1 {
+    font-size: 5.75rem;
+    line-height: 7.5rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+    letter-spacing: 0;
+}
+.section-banner-nclex h1 span {
+    background: -webkit-linear-gradient(#DA9E03 100%, #FBD850 100%), #ffffff;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.section-banner-nclex p {
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 500;
+    font-size: 1.75rem;
+    line-height: 2.5rem;
+    max-width: 53rem;
+}
+.section-banner-nclex .btn {
+    font-size: 2.25rem;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 0.875rem;
+    text-transform: uppercase;
+    margin-top: 1.5rem;
+    padding: 0.875rem 1.9rem;
+}
+.section-banner-nclex .link-underline {
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 1.75rem;
+    line-height: 1.5rem;
+    border-bottom: 1px solid #ffffff;
+    display: inline-block;
+    margin-top: 2.1rem;
+}
+.section-banner-nclex .banner-image {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    object-position: right;
+    width: 56.1%;
+}
+/* ----- /SECTION BANNER NCLEX ----- */
+/*  */
 /* ----- MEDIA ----- */
 @media(min-width: 1600px) {
     .header-steps .container {
@@ -2886,6 +2957,28 @@ h5 {
         bottom: 5.3rem;
     }
     /* ----- /SECTION PRICING ----- */
+    /*  */
+    /* ----- SECTION BANNER NCLEX ----- */
+    .section-banner-nclex {
+        padding-bottom: 1rem;
+    }
+    .section-banner-nclex h1 {
+        font-size: 4.5rem;
+        line-height: 5rem;
+    }
+    .section-banner-nclex p {
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+    .section-banner-nclex .btn {
+        font-size: 2rem;
+    }
+    .section-banner-nclex .link-underline {
+        font-size: 1.5rem;
+        line-height: 1.3rem;
+    }
+    
+    /* ----- /SECTION BANNER NCLEX ----- */
     /*  */
 }
 @media(max-width: 991px) {
@@ -3118,6 +3211,12 @@ h5 {
         font-size: 2rem;
     }
     /* ----- /PRICING MODAL ----- */
+    /*  */
+    /* ----- SECTION BANNER NCLEX ----- */
+    .section-banner-nclex .banner-image {
+        display: none;
+    }
+    /* ----- /SECTION BANNER NCLEX ----- */
     /*  */
 }
 @media(max-width: 767px) {
@@ -3640,6 +3739,36 @@ h5 {
         max-width: 50%;
     }
     /* ----- /PRICING MODAL ----- */
+    /*  */
+    /* ----- SECTION BANNER NCLEX ----- */
+    .section-banner-nclex {
+        padding-bottom: 3rem;
+    }
+    .section-banner-nclex .banner-image {
+        display: none;
+    }
+    .section-banner-nclex .container-fluid {
+        padding: 0 1rem;
+    }
+    .section-banner-nclex h1 {
+        font-size: 2.5rem;
+        line-height: 3rem;
+    }
+    .section-banner-nclex p {
+        font-size: 1.25rem;
+        line-height: 1.75rem;
+    }
+    .section-banner-nclex .btn {
+        font-size: 1.5rem;
+        padding: 0.5rem 1.5rem;
+        margin-top: 0.5rem;
+    }
+    .section-banner-nclex .link-underline {
+        font-size: 1.25rem;
+        line-height: 1.125rem;
+        margin-top: 1.5rem;
+    }
+    /* ----- /SECTION BANNER NCLEX ----- */
     /*  */
 }
 /* ----- /MEDIA ----- */
